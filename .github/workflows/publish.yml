@@ -29,7 +29,7 @@ jobs:
 
     - name: Run daily update
       run: |
-        python main.py
+        python best-invidious-server.py
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automated Change
