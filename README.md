@@ -1,8 +1,12 @@
 # Best Invidious Server
 
-🚀 Checks for the best Invidious.io servers.
+🚀 Always redirect your browser to the best Invidious.io server.
 
 [![Supported Python versions](https://img.shields.io/badge/Python-%3E=3.6-blue.svg)](https://www.python.org/downloads/) [![PEP8](https://img.shields.io/badge/Code%20style-PEP%208-orange.svg)](https://www.python.org/dev/peps/pep-0008/) 
+
+
+## Demo
+*Soon ...*
 
 
 ## Requirements
@@ -19,7 +23,6 @@ pip install -r requirements.txt
 
 ## ⌨️ Usage
 
-```SH
-python best-invidious-server.py
-
+```sh
+python app.py
 ```
