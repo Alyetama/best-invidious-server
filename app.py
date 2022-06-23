@@ -138,6 +138,7 @@ def _app_shutdown():
 
 
 @app.get('/', status_code=307)
+@app.get('/watch', status_code=307)
 @app.get('/best_server', status_code=307)
 def best_server(request: Request, redirect=True):
     _best_servers = runner._best_servers
@@ -147,6 +148,13 @@ def best_server(request: Request, redirect=True):
     if not redirect:
         return HTMLResponse(_best_server)
     else:
+        request_url =  str(request.url)
+        if 'watch' in request_url:
+            video_id = request_url.split('/watch?v=')[1]
+            _best_server = f'{_best_server}/watch?v={video_id}'
+        if 'channel' in request_url:
+            channel_id = request_url.split('/channel/')[1]
+            _best_server = f'{_best_server}/channel/{channel_id}'
         return RedirectResponse(_best_server)
 
 
